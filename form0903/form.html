@@ -6,18 +6,7 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<script>
-			var email = document.getElementById("email");
-			email.addEventListener("keyup", function
-			(event) {
-			if(email.validity.typeMismatch) {
-			email.setCustomValidity(" נא להקיש כתובת דואר תקינה ");
-			} 
-			else {
-			email.setCustomValidity("");
-			}
-			});
-		</script>
+
 		<legend>
 			טופס הרשמה
 		</legend>
@@ -107,5 +96,17 @@
 				איפוס
 			</button>
 		</form>
+				<script>
+			var email = document.getElementById("email");
+			email.addEventListener("keyup", function
+			(event) {
+			if(email.validity.typeMismatch) {
+			email.setCustomValidity(" מטומטם אתה לא יודע שצריך @ בכתובת אימייל xxxxx@xxxx.xxx ");
+			} 
+			else {
+			email.setCustomValidity("");
+			}
+			});
+		</script>
 	</body>
 </html>
