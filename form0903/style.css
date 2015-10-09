@@ -1,0 +1,27 @@
+body {
+	direction: rtl;
+	text-align: right;
+	font-family: Arial;
+}
+input {
+	margin: 15px 15px;
+	padding: 5px;
+}
+legend {
+	font-size: 25px;	
+	margin: 20px 0;
+	
+}
+#advertiser:invalid {
+color: red;
+}
+#advertiser:valid {
+color: green;
+}
+progress{
+	padding: 5px;
+	margin: 5px;
+	}
+#age input{
+	height: 32px;
+}

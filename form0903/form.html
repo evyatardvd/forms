@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> form 02</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<script>
+			var email = document.getElementById("email");
+			email.addEventListener("keyup", function
+			(event) {
+			if(email.validity.typeMismatch) {
+			email.setCustomValidity(" נא להקיש כתובת דואר תקינה ");
+			} 
+			else {
+			email.setCustomValidity("");
+			}
+			});
+		</script>
+		<legend>
+			טופס הרשמה
+		</legend>
+		<form>
+			<div id="part1">
+				<legend>
+					שלב 1
+				</legend>
+				<div>
+					<label> שם : </label>
+					<input type="text" maxlength="30" placeholder="שם עד 30 אותיות" required=""/>
+				</div>
+				<div>
+					<label> אימייל: </label>
+					<input type="email" id="email" placeholder="כתובת מייל עד 30 אותיות" maxlength="30" required=""/>
+				</div>
+				<div>
+					<label> סיסמה: </label>
+					<input type="password" maxlength="16" placeholder="סיסמה עד 16 תווים" required=""/>
+				</div>
+				<div>
+					<label> אימות סיסמה: </label>
+					<input type="password" maxlength="16" placeholder="אימות סיסמה" required=""/>
+				</div>
+				<progress value="1" max="3">
+					צעד  1  מתוך 3
+				</progress>
+			</div>
+			<div id="part2">
+				<legend>
+					שלב 2
+				</legend>
+				<div id="age">
+					<label> גיל: </label>
+					<input type="number" min="18" max="120" step="1" placeholder="גיל" />
+				</div>
+				<div>
+					<label> מצב משפחתי: </label>
+					<input type="radio" name="family" id="single" value="רווק" checked=""/>
+					<label for="single">רווק</label>
+					<input type="radio" name="family" id="married" value="נשוי"/>
+					<label for="married">נשוי</label>
+				</div>
+				<div>
+					<label> תחביבים: </label>
+					<input type="checkbox" name="hobby" id="hobby1" value="ספורט" />
+					<label for="hobby1">ספורט</label>
+					<input type="checkbox" name="hobby" id="hobby2" value="קריאה" />
+					<label for="hobby2">קריאה</label>
+					<input type="checkbox" name="hobby" id="hobby3" value="בישול" />
+					<label for="hobby3">בישול</label>
+					<input type="checkbox" name="hobby" id="hobby4" value="גינון" />
+					<label for="hobby4">גינון</label>
+					<input type="checkbox" name="hobby" id="hobby5" value="מחשבים" />
+					<label for="hobby5">מחשבים</label>
+				</div>
+				<div>
+					<label for="advertiser"> שם המפרסם: </label>
+					<input id="advertiser" pattern="W24LCH">
+					<button>
+						אישור
+					</button>
+				</div>
+				<progress value="2" max="3">
+					צעד 2  מתוך 3
+				</progress>
+			</div>
+			<div id="part3">
+				<legend>
+					שלב 3
+				</legend>
+				<div id="profile-pic">
+					<label>תמונת פרופיל:</label>
+					<input type="file" />
+				</div>
+				<div>
+					<label>ספר על עצמך :</label>
+					<br/>
+					<textarea id="about-me" cols="70" rows="10">הקלד</textarea>
+				</div>
+			</div>
+			<progress value="3" max="3">
+				צעד  3  מתוך 3
+			</progress>
+			<button type="submit"> שלח </button>
+			<button type="reset">
+				איפוס
+			</button>
+		</form>
+	</body>
+</html>
